@@ -1,0 +1,4 @@
+sbatch script/mnbase_me2_ts50000_ifsoft_rlf_vbrt_udFalse_rit1.0_tprt20_sc30_nsc20,20,20_bo20.sh
+sbatch script/mnctx_me2_ts50000_ifsoft_rlt_vbrt_udFalse_rit1.0_tprt20_sc30_nsc20,20,20_bo20.sh
+sbatch script/mnctx_me2_ts50000_ifgreedy_rlt_vbrt_udFalse_rit1.0_tprt20_sc30_nsc20,20,20_bo20.sh
+sbatch script/mnseq_me2_ts50000_ifsoft_rlt_vbrt_udTrue_rit0.8_tprt20_sc30_nsc20,20,20_bo20.sh
