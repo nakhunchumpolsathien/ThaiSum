@@ -2,23 +2,33 @@
 A dataset for Thai text summarization.
 
 **Notes** <br>
-- ThaiSum คือชุดข้อมูลขนาดใหญ่สำหรับเทรนระบบสรุปข้อความภาษาไทย จากเว็บไซต์ ไทยรัฐ, ไทยพีบีเอส, ประชาไท และ เดอะแสตนดาร์ด เราหวังว่าข้อมูลชุดนี้จะช่วยยกระดับวิจัยเกี่ยวกับระบบสรุปข้อความภาษาไทยให้ดีขึ้น เนื่องจากที่ผ่านมามีการตีพิมพ์งานวิจัยด้านนี้น้อยมาก
+- ThaiSum คือชุดข้อมูลสำหรับเทรนระบบสรุปข้อความภาษาไทย จากเว็บไซต์ ไทยรัฐ, ไทยพีบีเอส, ประชาไท และ เดอะแสตนดาร์ด
 - ผู้สนใจยังสามารถดาวน์โหลด โมเดลที่เทรนแล้วไปทดสอบกับ test set ของท่าน โดยเราได้ modify ซอร์ซโค้ดของ BertSum และ ARedSum ให้รองรับภาษาไทย ศึกษาเพิ่มเติมได้ที่ [ARedSum_for_Thai_text.ipynb](ARedSum_for_Thai_text.ipynb) และ [BertSum_for_Thai_text.ipynb](BertSum_for_Thai_text.ipynb) ทั้งนี้ท่านต้อง process ข้อความของท่านเองให้เหมาะกับแต่ละโมเมลโดยเรามีตัวอย่างไว้ให้แล้ว
 - เราระบุที่มาของทุกข่าวในชุดข้อมูลนี้ในคอลัมน์ url หากท่านต้องการดัดแปลงและเผยแพร่ชุดข้อมูลนี้ต่อ กรุณาใส่ที่มาของทุกๆบทความด้วย
-- ชุดข้อมูลนี้ยังเป็นประโยชน์ต่อระบบประมวลผลทางภาษาไทยอื่นๆเช่น news classification (ทั้งแบบ multi-label และ single-label), headline generation, language modelling ทั้งนี้แนะนำให้ preprocess ชุดข้อมูลให้เหมาะสมกับแต่ละ task
+- ชุดข้อมูลนี้ยังเป็นประโยชน์ต่อระบบประมวลผลทางภาษาไทยอื่นๆเช่น news classification (ทั้งแบบ multi-label และ single-label), headline generation, language modelling
  
 # 0. Download
 ## 0.1 Dataset
 |Dataset|Remark|
 |:---|:---|
-|[thaisum.csv](https://docs.google.com/forms/d/e/1FAIpQLSe24ieKiIz5du9CUYdJ_Wa1eeERMLyiJBfHZhbGEViAnjP2Ug/viewform?usp=sf_link)|contains `title`, `body`, `summary`, `type`, `tags`, `url` columns. (2.9 GB)|
-|[test_set.csv and validation_set.csv](https://bit.ly/thaisum-test-valid)|contain `title`, `body`, `summary`, `type`, `tags`, `url` columns. (113 MB each)|
+|[thaisum.csv](https://docs.google.com/forms/d/e/1FAIpQLSdq7nnJ5rob6tXWp6EstZ4oDbzdxTCHkwwinbJGmcj7O2q7nQ/viewform?usp=sf_link)|contains `title`, `body`, `summary`, `type`, `tags`, `url` columns. (2.9 GB)|
+|[test_set.csv](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/test_set.csv)|contain `title`, `body`, `summary`, `type`, `tags`, `url` columns. (113 MB each)|
+|[validation_set.csv](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/validation_set.csv)|contain `title`, `body`, `summary`, `type`, `tags`, `url` columns. (113 MB each)|
 
 ## 0.2 Trained Models
-|Model|Remark|
+### 0.2.1 BertSum
+|Model|Size|
 |:---|:---|
-|[BertSum](https://bit.ly/bertsum)|contains model checkpoints of  `BertSumExt` (2.2 GB), `BertSumAbs` (3.9 GB), `BertSumExtAbs` (3.9 GB).|
-|[ARedSum](https://bit.ly/aredsum)|contains model checkpoints of  `ARedSum-Base` (2.2 GB), `ARedSum-CTX` (0.7 GB), `ARedSum-SEQ` (2.4 GB).|
+|[BertSumExt](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/bertsum_models/BertsumExt_thaisum.pt)|2.1 GB |
+|[BertSumAbs](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/bertsum_models/BertSumAbs-thaisum.pt)|3.6 GB |
+|[BertSumExtAbs](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/bertsum_models/BertSumExtAbs-thaisum.pt)|3.6 GB |
+### 0.2.2 ARedSum
+|Model|Size|
+|:---|:---|
+|[ARedSumBase](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/aredsum_models/ARedSum_base.pt)|2.1 GB |
+|[ARedSumCTX](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/aredsum_models/ARedSum_CTX.pt)|737.6 MB |
+|[ARedSumSEQ](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/aredsum_models/ARedSum_SEQ.pt)|2.3 GB |
+
 ## 0.3 Source Code Credit
 |Model|Original Source| Paper|
 |:---|:---:|:---:|
