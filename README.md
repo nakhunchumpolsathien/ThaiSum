@@ -12,8 +12,8 @@ A dataset for Thai text summarization.
 |Dataset|Remark|
 |:---|:---|
 |[thaisum.csv](https://docs.google.com/forms/d/e/1FAIpQLSdq7nnJ5rob6tXWp6EstZ4oDbzdxTCHkwwinbJGmcj7O2q7nQ/viewform?usp=sf_link)|contains `title`, `body`, `summary`, `type`, `tags`, `url` columns. (2.9 GB)|
-|[test_set.csv](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/test_set.csv)|contain `title`, `body`, `summary`, `type`, `tags`, `url` columns. (113 MB each)|
-|[validation_set.csv](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/validation_set.csv)|contain `title`, `body`, `summary`, `type`, `tags`, `url` columns. (113 MB each)|
+|[test_set.csv](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/test_set.csv)|contain `title`, `body`, `summary`, `type`, `tags`, `url` columns. (113 MB)|
+|[validation_set.csv](https://nakhun-chumpolsathien.oss-us-west-1.aliyuncs.com/thaisum/validation_set.csv)|contain `title`, `body`, `summary`, `type`, `tags`, `url` columns. (113 MB)|
 
 ## 0.2 Trained Models
 ### 0.2.1 BertSum
@@ -107,4 +107,4 @@ As mentioned earlier, it is difficult (and sometimes flexible) to pinpoint the e
 # 7. Acknowledgment
 - A great appreciation goes to my supervisor, [Assoc. Prof. Gao Yang](https://www.researchgate.net/profile/Yang_Gao136).
 - Some codes here are written by [caramelWaffle](https://github.com/caramelWaffle).
-- I would like to thank [Beijing Engineering Research Center of High Volume Language Information Processing and Cloud Computing Applications](http://english.bit.edu.cn/schoold/186889.htm) for providing computing resources to conduct the experiment.
+- I would like to thank [Beijing Engineering Research Center of High Volume Language Information Processing and Cloud Computing Applications](https://english.bit.edu.cn/schoold/a186889.htm) for providing computing resources to conduct the experiment.
