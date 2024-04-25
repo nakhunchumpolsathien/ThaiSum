@@ -1,6 +1,9 @@
 # ThaiSum
 A dataset for Thai text summarization.
 
+___
+For any questions regarding the dataset or the experiment, please feel free to email me at nakhun.chum[at sign]gmail.com
+___
 **Notes** <br>
 - ThaiSum คือชุดข้อมูลสำหรับเทรนระบบสรุปข้อความภาษาไทย จากเว็บไซต์ ไทยรัฐ, ไทยพีบีเอส, ประชาไท และ เดอะแสตนดาร์ด
 - ผู้สนใจยังสามารถดาวน์โหลด โมเดลที่เทรนแล้วไปทดสอบกับ test set ของท่าน โดยเราได้ modify ซอร์ซโค้ดของ BertSum และ ARedSum ให้รองรับภาษาไทย ศึกษาเพิ่มเติมได้ที่ [ARedSum_for_Thai_text.ipynb](ARedSum_for_Thai_text.ipynb) และ [BertSum_for_Thai_text.ipynb](BertSum_for_Thai_text.ipynb) ทั้งนี้ท่านต้อง process ข้อความของท่านเองให้เหมาะกับแต่ละโมเมลโดยเรามีตัวอย่างไว้ให้แล้ว
